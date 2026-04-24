@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/class_draw.js"></script>
+    <script src="js/class_go.js"></script>
+    <script src="js/class_opponent.js"></script>
+    <script src="js/class_spawn.js"></script>
+    <script src="js/init.js"></script>
+    <!-- <script src="../main.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <template id="template_0">
+        <div id="table" style="opacity: 0"></div>
+    </template>
+    <template id="template_1">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Какой знак препинания поставить в конце фразы «Ура</div>
+            <div class="button" onclick="template(3)">а. ! </div>
+            <div class="button" onclick="template(2)">б. ?</div>
+            <div class="button" onclick="template(2)">в. . </div>
+        </div>
+    </template>
+    <template id="template_2">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Неправильно!<br/>Правильный ответ: A<br/>Это восклицание</div>
+            <div class="button" onclick="f_dialog_off()">Понятно</div>
+        </div>
+    </template>
+    <template id="template_3">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Правильно!</div>
+            <div class="button" onclick="f_dialog_off_true()">Ура!</div>
+        </div>
+    </template>
+    <template id="template_4">
+        <div id="table" style="opacity: 1">
+            <div class="heading">В каком предложении правильно оформлена прямая речь: </div>
+            <div class="button" onclick="template(5)">а. «Пойдём гулять! — сказал папа»</div>
+            <div class="button" onclick="template(5)">б. «Пойдём гулять» — сказал папа!</div>
+            <div class="button" onclick="template(3)">в. «Пойдём гулять!» — сказал папа</div>
+        </div>
+    </template>
+    <template id="template_5">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Кавычка должна закрываться перед тире, восклицательный знак должен стоять внутри кавычек</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+        <template id="template_6">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Где правильно поставлен тире:  </div>
+            <div class="button" onclick="template(3)">а. Я — честный человек?;</div>
+            <div class="button" onclick="template(7)">б. Бедность — не порок;</div>
+            <div class="button" onclick="template(7)">в. Мой брат — студент</div>
+        </div>
+    </template>
+    <template id="template_7">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Тире не ставится перед «не» в устойчивых выражениях, местоимение + существительное не требуют тире</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <template id="template_8">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Верно: в корне -счит- две «с» (рассчитать)</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <script src="js/dialog.js"></script>
+    <div id="scene1">
+        <div id="table" style="opacity: 0"></div>
+    </div>
+    <div id="actions">версия альфа</div>
+    <script src="js/prog.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/class_draw.js"></script>
+    <script src="js/class_go.js"></script>
+    <script src="js/class_opponent.js"></script>
+    <script src="js/class_spawn.js"></script>
+    <script src="js/init.js"></script>
+    <!-- <script src="../main.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <template id="template_0">
+        <div id="table" style="opacity: 0"></div>
+    </template>
+    <template id="template_1">
+        <div id="table" style="opacity: 1">
+            <div class="heading">В каком ряду все слова пишутся с буквой «ё»:</div>
+            <div class="button" onclick="template(2)">а. Ч…рный, ш…рох, ж…лтый; </div>
+            <div class="button" onclick="template(2)">б. Крыж…вник, ш…пот, капюш…н;</div>
+            <div class="button" onclick="template(3)">в. Ч…лка, ш…лк, ж…сткий? </div>
+        </div>
+    </template>
+    <template id="template_2">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Ё пишется, когда можно подобрать однокоренное слово в котором вместо ё пишется е</div>
+            <div class="button" onclick="f_dialog_off()">Понятно</div>
+        </div>
+    </template>
+    <template id="template_3">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Правильно!</div>
+            <div class="button" onclick="f_dialog_off_true()">Ура!</div>
+        </div>
+    </template>
+    <template id="template_4">
+        <div id="table" style="opacity: 1">
+            <div class="heading">В каком ряду во всех словах пропущена одна и та же буква:  </div>
+            <div class="button" onclick="template(5)">а. Бе…чувственный, и…бежать, ра…гадать;</div>
+            <div class="button" onclick="template(5)">б. Ра…бить, бе…вкусный, и…точить;</div>
+            <div class="button" onclick="template(3)">в. Во…хождение, …делать, бе…ценный?</div>
+        </div>
+    </template>
+    <template id="template_5">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>С пишется, когда после приставки идёт глухой звук, З если звонкий</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+        <template id="template_6">
+        <div id="table" style="opacity: 1">
+            <div class="heading">В каком слове есть ошибка:  </div>
+            <div class="button" onclick="template(7)">а. Расчёт;</div>
+            <div class="button" onclick="template(8)">б. Рассчитать;</div>
+            <div class="button" onclick="template(3)">в. Рассчёт?</div>
+        </div>
+    </template>
+    <template id="template_7">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Верно: в корне -чёт- одна «с» (расчёт)</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <template id="template_8">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Верно: в корне -счит- две «с» (рассчитать)</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <script src="js/dialog.js"></script>
+    <div id="scene1">
+        <div id="table" style="opacity: 0"></div>
+    </div>
+    <div id="actions">версия альфа</div>
+    <script src="js/prog.js"></script>
+</body>
+</html>

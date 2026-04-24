@@ -1,0 +1,109 @@
+html,
+body{
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    background: url(images/grass_fon.png);
+    background-size: 125px 125px;
+    user-select: none;
+}
+#scene1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.personaj{
+    position: absolute;
+}
+.wall{
+    background: url(images/wall.png) no-repeat center/cover;
+    filter: brightness(1.5);
+}
+.walltp{
+    background: url(images/wall.png) no-repeat center/cover;
+    z-index: -5;
+    filter: brightness(70%);
+}
+.hero{
+    background: url(images/1.png) no-repeat center/cover;
+}
+.walk{
+    background: url(images/hero.gif) no-repeat center/cover;
+}
+.opponent{
+    background: goldenrod;
+}
+.bright{
+    filter: brightness(150%);
+}
+#actions{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: fit-content;
+    font-size: 50px;
+    font: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    user-select: none;
+    background:goldenrod;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border: 5px solid darkgoldenrod;
+}
+#table {
+    position: fixed;
+    bottom: 30%;
+    left: 30%;
+    /* transform: translate(100%, 100%); */
+    width: fit-content;
+    max-width: 30%;
+    border: 3px solid black;
+    background: yellow;
+    margin: 20px;
+    padding: 50px;
+    filter: saturate(2);
+    z-index: 10000;
+}
+.stol{
+    background: url(images/table.png) no-repeat center/cover;
+}
+.styl{
+    background: url(images/chair.png) no-repeat center/cover;
+}
+.skaf{
+    background: url(images/tree\ \(1\).png) no-repeat center/cover;
+}
+.heading {
+    user-select: none;
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+    background: lightsalmon; /* Добавлен фон */
+    color: white; /* Чтобы текст был виден на светлом фоне */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    margin-bottom: 20px;
+    z-index: 10001;
+}
+
+.button {
+    position: relative;
+    font-size: 25px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background: coral;
+    filter: brightness(1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    user-select: none;
+    display: block; /* Чтобы кнопка занимала всю ширину */
+    padding: 10px 20px;
+    margin: 10px auto; /* Центрируем по горизонтали */
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.button:hover {
+    filter: brightness(1.3);
+}

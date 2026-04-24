@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/class_draw.js"></script>
+    <script src="js/class_go.js"></script>
+    <script src="js/class_opponent.js"></script>
+    <script src="js/class_spawn.js"></script>
+    <script src="js/init.js"></script>
+    <!-- <script src="../main.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <template id="template_0">
+        <div id="table" style="opacity: 0"></div>
+    </template>
+    <template id="template_1">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Как правильно произносить слово «щавель»:</div>
+            <div class="button" onclick="template(2)">а. щАвель; </div>
+            <div class="button" onclick="template(3)">б. щавЕль;</div>
+            <div class="button" onclick="template(2)">в. щавЭль? </div>
+        </div>
+    </template>
+    <template id="template_2">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Неправильно!<br/>Правильный ответ: Б<br/>Ударение падает на второй слог, звук «э» после «в» здесь быть не может</div>
+            <div class="button" onclick="f_dialog_off()">Понятно</div>
+        </div>
+    </template>
+    <template id="template_3">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Правильно!</div>
+            <div class="button" onclick="f_dialog_off_true()">Ура!</div>
+        </div>
+    </template>
+    <template id="template_4">
+        <div id="table" style="opacity: 1">
+            <div class="heading">Как звучит сочетание «чн» в слове «скучно»:  </div>
+            <div class="button" onclick="template(5)">а. Ску[чн]о;</div>
+            <div class="button" onclick="template(3)">б. Ску[шн]о;</div>
+            <div class="button" onclick="template(5)">в. Возможны оба варианта?</div>
+        </div>
+    </template>
+    <template id="template_5">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: Б<br/>современная норма требует произношения [шн]</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+        <template id="template_6">
+        <div id="table" style="opacity: 1">
+            <div class="heading">В каком слове ударение падает на первый слог:  </div>
+            <div class="button" onclick="template(3)">а. Торты;</div>
+            <div class="button" onclick="template(7)">б. Звонит;</div>
+            <div class="button" onclick="template(7)">в. Каталог?</div>
+        </div>
+    </template>
+    <template id="template_7">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: А</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <template id="template_8">
+    <div id="table" style="opacity: 1">
+        <div class="heading">Неправильно!<br/>Правильный ответ: В<br/>Верно: в корне -счит- две «с» (рассчитать)</div>
+        <div class="button" onclick="f_dialog_off()">Понятно</div>
+    </div>
+    </template>
+    <script src="js/dialog.js"></script>
+    <div id="scene1">
+        <div id="table" style="opacity: 0"></div>
+    </div>
+    <div id="actions">версия альфа</div>
+    <script src="js/prog.js"></script>
+</body>
+</html>
