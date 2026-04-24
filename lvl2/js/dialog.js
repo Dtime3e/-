@@ -57,9 +57,9 @@ function correct(){
     answers++;
     if(answers>=3){
         if(monsters[suspect][0] == 0){
-            ylika.textContent = "Улика: Цвет виновного красный";
+            ylika.textContent = "Улика: У виновного две ноги";
         }else if(monsters[suspect][0] == 1){
-            ylika.textContent = "Улика: Цвет виновного синий";
+            ylika.textContent = "Улика: У виновного три ноги";
         }
        template(9);
     }
