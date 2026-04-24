@@ -29,9 +29,9 @@ function f_proceed(){
         div0.setAttribute('id','id'+i);
         if(i == suspect){
             div0.classList.add('suspect');
-            div0.onclick = 'win()'
+            div0.onclick = ''+win()+'';
         }else{
-            div0.onclick = 'lose()'
+            div0.onclick = ''+lose()+'';
         }
         table.appendChild(div0);
         document.getElementById('id'+i).style.background = 'url(images/'+i+'.png) no-repeat center/cover'
@@ -59,6 +59,6 @@ function f_preloader(){
 function win(){
     print('Поздравляем! Ты нашёл монстрика, съевшего пирог!')
 }
-function win(){
+function lose(){
     print('Ты обвинил невинного монстра и проиграл!')
 }
