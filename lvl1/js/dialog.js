@@ -57,7 +57,12 @@ function f_dialog_off_true(){
 function correct(){
     answers++;
     if(answers>=3){
-        f_proceed();
+        if(monsters[suspect][0] == 0){
+            ylika.textContent = "Улика: Цвет виновного красный";
+        }else if(monsters[suspect][0] == 1){
+            ylika.textContent = "Улика: Цвет виновного синий";
+        }
+       template(9);
     }
 }
 function incorrect(){
