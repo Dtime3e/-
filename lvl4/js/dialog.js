@@ -1,7 +1,24 @@
 let dialog = false;
 let answers = 0;
 let health = 5;
-
+let monsteras = [
+    [0,0,0,0],
+    [0,0,0,1],
+    [0,0,1,0],
+    [0,0,1,1],
+    [0,1,0,0],
+    [0,1,0,1]
+    [0,1,1,0],
+    [0,1,1,1],
+    [1,0,0,0],
+    [1,0,0,1],
+    [1,0,1,0],
+    [1,0,1,1],
+    [1,1,0,0],
+    [1,1,0,1],
+    [1,1,1,0],
+    [1,1,1,1]
+]
 function template(temp){
     document.getElementById('table').remove();
     var template = document.getElementById("template_"+temp);
@@ -36,14 +53,18 @@ function f_dialog_off_true(){
     dialog = false;
     correct()
 }
-
 function correct(){
     answers++;
     if(answers>=3){
-        f_proceed();
+        if(monsters[suspect][0] == 0){
+            ylika.textContent = "Улика: Тот, кто съел пирог в грустном настроении";
+        }else if(monsters[suspect][0] == 1){
+            ylika.textContent = "Улика: Тот, кто съел пирог в весёлом настроении";
+        }
+       template(9);
     }
-    console.log(answers);
 }
+
 function incorrect(){
     health--;
     if(health<=0){
