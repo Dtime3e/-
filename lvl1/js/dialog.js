@@ -1,7 +1,24 @@
 let dialog = false;
 let answers = 0;
 let health = 5;
-
+let monsteras = [
+    [0,0,0,0],
+    [0,0,0,1],
+    [0,0,1,0],
+    [0,0,1,1],
+    [0,1,0,0],
+    [0,1,0,1]
+    [0,1,1,0],
+    [0,1,1,1],
+    [1,0,0,0],
+    [1,0,0,1],
+    [1,0,1,0],
+    [1,0,1,1],
+    [1,1,0,0],
+    [1,1,0,1],
+    [1,1,1,0],
+    [1,1,1,1]
+]
 function template(temp){
     document.getElementById('table').remove();
     var template = document.getElementById("template_"+temp);
