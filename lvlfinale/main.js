@@ -18,7 +18,11 @@ let monsteras = [
     [1,1,1,0],
     [1,1,1,1]
 ]
-let suspect = 0;
+let suspect1 = 0;
+
+const urlParams = new URLSearchParams(window.location.search);
+suspect1 = urlParams.get('suspect');
+console.log(suspect1);
 
 function f_proceed(){
     for(let i = 0; i<16; i++){
@@ -27,7 +31,7 @@ function f_proceed(){
         div0.className = 'monst';
         div0.classList.add('button');
         div0.setAttribute('id','id'+i);
-        if(i == suspect){
+        if(i == suspect1){
             div0.classList.add('suspect');
             div0.onclick = ''+win()+'';
         }else{
